@@ -1,4 +1,4 @@
-package chapters.introduction;
+package chapters.introduction.duck.simulation;
 
 public class DecoyDuck extends Duck {
 
