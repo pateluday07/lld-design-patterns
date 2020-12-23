@@ -1,4 +1,4 @@
-package chapters.introduction.duck.simulation;
+package patterns.strategy.pattern.duck.simulation;
 
 public class FlyNoWay implements FlyBehavior {
     @Override

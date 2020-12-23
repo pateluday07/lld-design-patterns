@@ -1,4 +1,4 @@
-package chapters.introduction.adventure.game;
+package patterns.strategy.pattern.adventure.game;
 
 public class Queen extends Character {
 
