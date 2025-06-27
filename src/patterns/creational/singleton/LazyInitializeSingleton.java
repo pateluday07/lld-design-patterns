@@ -20,4 +20,8 @@ public class LazyInitializeSingleton {
         return singleton;
     }
 
+    public static void doSomething() {
+        System.out.println("LazyInitializeSingleton: doing something..");
+    }
+
 }
