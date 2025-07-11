@@ -13,6 +13,10 @@ public class NotificationFactory {
         notificationMap.put("SMS", SMSNotification::new);
     }
 
+    private NotificationFactory(){
+
+    }
+
     public static void registerNotification(String type, Supplier<Notification> supplier) {
         notificationMap.put(type, supplier);
     }
