@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class NotificationFactory {
+public final class NotificationFactory {
 
-    private static final Map<String, Supplier<Notification>> notificationMap = new HashMap<>();
+    private static final Map<String, Supplier<Notification>> NOTIFICATION_MAP = new HashMap<>();
 
     static {
-        notificationMap.put("EMAIL", EmailNotification::new);
-        notificationMap.put("SMS", SMSNotification::new);
+        NOTIFICATION_MAP.put("EMAIL", EmailNotification::new);
+        NOTIFICATION_MAP.put("SMS", SMSNotification::new);
     }
 
     private NotificationFactory() {
@@ -18,13 +18,13 @@ public class NotificationFactory {
     }
 
     public static void registerNotification(String type, Supplier<Notification> supplier) {
-        notificationMap.put(type, supplier);
+        NOTIFICATION_MAP.put(type, supplier);
     }
 
     public static Notification createNotification(String type) {
-        if (type == null || !notificationMap.containsKey(type)) {
+        if (type == null || !NOTIFICATION_MAP.containsKey(type)) {
             throw new IllegalArgumentException("Notification type not supported: " + type);
         }
-        return notificationMap.get(type).get();
+        return NOTIFICATION_MAP.get(type).get();
     }
 }
