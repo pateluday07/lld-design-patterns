@@ -4,5 +4,7 @@ public interface Coffee {
 
     String getDescription();
 
-    double cost();
+    double getCost();
+
+    void setCost(double cost);
 }

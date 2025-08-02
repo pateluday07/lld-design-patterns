@@ -8,14 +8,17 @@ public class DecoratorTester {
         coffee1 = new SugarDecorator(coffee1);
         System.out.println(
             "Coffee1\n"+
-            "Description: " + coffee1.getDescription() + ", Cost: " + coffee1.cost()
+            "Description: " + coffee1.getDescription() + ", Cost: " + coffee1.getCost()
         );
 
         Coffee coffee2 = new BasicCoffee();
         coffee2 = new SugarDecorator(coffee2);
+        coffee2.setCost(10.0);
+        System.out.println();
         System.out.println(
             "Coffee2\n" +
-            "Description: " + coffee2.getDescription() + ", Cost: " + coffee2.cost()
+            "Description: " + coffee2.getDescription() + ", Cost: " + coffee2.getCost()
         );
     }
+
 }

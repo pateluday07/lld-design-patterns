@@ -2,6 +2,8 @@ package patterns.structural.decorator;
 
 public class MilkDecorator extends CoffeeDecorator {
 
+    private double cost = 20.5; // Cost for milk
+
     public MilkDecorator(Coffee coffee) {
         super(coffee);
     }
@@ -12,7 +14,13 @@ public class MilkDecorator extends CoffeeDecorator {
     }
 
     @Override
-    public double cost() {
-        return coffee.cost() + 20.5;
+    public double getCost() {
+        return coffee.getCost() + cost;
     }
+
+    @Override
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+
 }
