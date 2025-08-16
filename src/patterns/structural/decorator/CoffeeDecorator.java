@@ -18,4 +18,13 @@ public abstract class CoffeeDecorator implements Coffee {
         return coffee.getCost();
     }
 
+    @Override
+    public boolean isHot() {
+        return coffee.isHot();
+    }
+
+    @Override
+    public void setHot(boolean hot) {
+        coffee.setHot(hot);
+    }
 }

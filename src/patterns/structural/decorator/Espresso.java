@@ -1,13 +1,13 @@
 package patterns.structural.decorator;
 
-public class BasicCoffee implements Coffee {
+public class Espresso implements Coffee {
 
-    private final double cost = 40.0;
+    private final double cost = 50;
     private boolean hot = true;
 
     @Override
     public String getDescription() {
-        return "Basic Coffee";
+        return "Espresso";
     }
 
     @Override

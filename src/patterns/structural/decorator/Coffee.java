@@ -6,5 +6,7 @@ public interface Coffee {
 
     double getCost();
 
-    void setCost(double cost);
+    boolean isHot();
+
+    void setHot(boolean hot);
 }
